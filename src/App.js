@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Albums from "./components/Albums/main.albums"
+import MainLayouts from "./components/Layouts/main.layouts"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Posts from "./components/Posts/main.posts"
+import Home from "./components/Home/main.home"
+import Errors from "./404"
 
-function App() {
+//parent component
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <MainLayouts>
+        <Router>
+          <Routes >
+            <Route path="/" element={<Home />} />
+            <Route path="/albums" element={<Albums />} />
+            <Route path="/posts" element={<Posts />} />
+            <Route path="*" element={<Errors></Errors>} />
+          </Routes>
+        </Router>
+      </MainLayouts>
+    </>
+  )
 }
 
-export default App;
+export default App
