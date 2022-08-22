@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Carousel, Button } from "react-bootstrap";
+import { Carousel, Button, Alert } from "react-bootstrap";
 import Loaders from "../Utilities/loaders";
 
 const Collection = () => {
@@ -33,8 +33,14 @@ const Collection = () => {
     return (
         <React.Fragment>
             <h1 className="mt-5 mb-3 text-center">
-                API Photos
+                API Albums
             </h1>
+
+            <div className="mt-2 justify-content-center text-center d-flex">
+                <Alert key="primary" variant="primary"  className="mb-3">
+                    Jumlah Data { limit }
+                </Alert>
+            </div>
             <Carousel>
                 {/* start */}
                 {datas.map((data, i) => {
@@ -56,10 +62,10 @@ const Collection = () => {
                 {/* end */}
             </Carousel>
             
-            <div className="mt-5 justify-content-center text-center">
-                <Button variant="primary" className="mx-2 px-3 py-1" onClick={() => handleLimit("+")}> <h2>+</h2> </Button>
+            <div className="mt-2 justify-content-center text-center">
+                <Button variant="primary" className="p-2 m-2" onClick={() => handleLimit("+")}> <h4>Tambah</h4> </Button>
                 {limit > 1 &&
-                    <Button variant="danger" className="mx-2 px-3 py-1" onClick={() => handleLimit("-")}> <h2>-</h2> </Button>
+                    <Button variant="danger" className="p-2 m-2" onClick={() => handleLimit("-")}> <h4>Kurang</h4> </Button>
                 }
             </div>
                 

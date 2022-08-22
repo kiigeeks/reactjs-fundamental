@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Card, Modal, Button } from "react-bootstrap";
+import { Card, Alert, Modal, Button } from "react-bootstrap";
 import Loaders from "../Utilities/loaders";
 
 const Collection = () => {
@@ -14,6 +14,8 @@ const Collection = () => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
+        console.log(`Halo bang, Tiap scroll mentok bawah nambah 10 data, data: ${limit}`);
+        
         let isCancelled = false
         if(isCancelled === false){
             setLoading(true)
@@ -33,7 +35,6 @@ const Collection = () => {
     function handleScroll() {
         if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
         setLimit((prev) => prev + 10)
-        console.log(`Halo bang dea, Tiap scroll mentok bawah nambah 10 limit: ${limit}`);
     }
 
     const handleClose = () => setShow(false);
@@ -51,10 +52,15 @@ const Collection = () => {
             </h1>
             
             {/* start */}
-            <div className="row justify-content-center ">
+            <div className="row justify-content-center text-center">
+
+                <Alert key="primary" variant="primary" style={{ width: "80%" }} className="mb-5">
+                    Data Default 10, Scroll Sampai Bawah untuk Menambah 10 Data Baru
+                </Alert>
+
                 {datas.map((data, i) => {
                     return (
-                    <Card onClick={() => handleShow(datas[i])} className="shadow-lg p-3 mb-2 bg-body rounded" style={{ width: "50em" }} key={i}>
+                    <Card onClick={() => handleShow(datas[i])} className="shadow-lg p-3 mb-2 bg-body rounded " style={{ width: "80%", cursor: "pointer" }} key={i}>
                         <Card.Body>{data.title}</Card.Body>
                     </Card>
                     )
@@ -64,11 +70,12 @@ const Collection = () => {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>{dataModal.title}</Modal.Title>
+                    <Modal.Title>Detail Post</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>   
-                    <small className="text-muted"><i>id posts : {dataModal.id}</i></small>
-                    <p>{dataModal.body}</p>
+                    <h3>id : {dataModal.id}</h3>
+                    <h5>title : {dataModal.title}</h5>
+                    <p>body : {dataModal.body}</p>
                 </Modal.Body>
                 <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
