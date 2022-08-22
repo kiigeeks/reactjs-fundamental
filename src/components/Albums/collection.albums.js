@@ -38,7 +38,7 @@ const Collection = () => {
 
             <div className="mt-2 justify-content-center text-center d-flex">
                 <Alert key="primary" variant="primary"  className="mb-3">
-                    Jumlah Data { limit }
+                    Menampilkan Data API dengan Carousel dengan Jumlah Data { limit }
                 </Alert>
             </div>
             <Carousel>
@@ -63,9 +63,9 @@ const Collection = () => {
             </Carousel>
             
             <div className="mt-2 justify-content-center text-center">
-                <Button variant="primary" className="p-2 m-2" onClick={() => handleLimit("+")}> <h4>Tambah</h4> </Button>
+                <Button variant="primary" className="p-2 m-2" onClick={() => handleLimit("+")}> <h5>Tambah</h5> </Button>
                 {limit > 1 &&
-                    <Button variant="danger" className="p-2 m-2" onClick={() => handleLimit("-")}> <h4>Kurang</h4> </Button>
+                    <Button variant="danger" className="p-2 m-2" onClick={() => handleLimit("-")}> <h5>Kurang</h5> </Button>
                 }
             </div>
                 

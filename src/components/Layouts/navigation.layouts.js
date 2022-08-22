@@ -12,7 +12,7 @@ const Navigation = () => {
             <Nav.Link style={ (pathName === "/") ? { color: "black", backgroundColor: "white", fontWeight: "500", borderRadius: "5px"} : {} } href="/"> Home</Nav.Link>
             <Nav.Link style={ (pathName === "/albums") ? { color: "black", backgroundColor: "white", fontWeight: "500", borderRadius: "5px"} : {} } href="/albums">Albums</Nav.Link>
             <Nav.Link style={ (pathName === "/posts") ? { color: "black", backgroundColor: "white", fontWeight: "500", borderRadius: "5px"} : {} } href="/posts">Posts</Nav.Link>
-            {/* <Nav.Link style={ (pathName === "/photos") ? { color: "black", backgroundColor: "white", fontWeight: "500", borderRadius: "5px"} : {} } href="/photos">Photos</Nav.Link> */}
+            <Nav.Link style={ (pathName === "/photos") ? { color: "black", backgroundColor: "white", fontWeight: "500", borderRadius: "5px"} : {} } href="/photos">Photos</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

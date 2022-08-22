@@ -6,7 +6,7 @@ import Posts from "./components/Posts/main.posts"
 import Home from "./components/Home/main.home"
 
 import Errors from "./404"
-// import Photos from "./components/Photos/main.photos"
+import Photos from "./components/Photos/main.photos"
 
 //parent component
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/albums" element={<Albums />} />
             <Route path="/posts" element={<Posts />} />
-            {/* <Route path="/photos" element={<Photos />} /> */}
+            <Route path="/photos" element={<Photos />} />
             <Route path="*" element={<Errors></Errors>} />
           </Routes>
         </Router>
