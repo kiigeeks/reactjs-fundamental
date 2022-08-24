@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import Collection from "./collection.photos";
+import { Container } from "react-bootstrap";
 
 //child component
 const Photos = (props) => {

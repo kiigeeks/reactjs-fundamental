@@ -21,7 +21,9 @@ const Collection = () => {
             setLoading(true)
             axios({
                 method : "GET",
-                url: `${process.env.REACT_APP_BASEURL}/posts?_limit=${limit}`
+                url: `${process.env.REACT_APP_BASEURL}/posts?_limit=${limit}`,
+                //biar gak kena cors
+                withCredentials: false
             }).then((result) => setDatas(result.data)).catch((err) => console.log(err)).finally(() => setLoading(false))
         }
 
@@ -47,7 +49,7 @@ const Collection = () => {
     
     return (
         <React.Fragment>
-            <h1 className="mt-5 mb-3 text-center">
+            <h1 className="mt-3 mb-3 text-center">
                 API Posts
             </h1>
             

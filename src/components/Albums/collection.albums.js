@@ -12,9 +12,12 @@ const Collection = () => {
         let isCancelled = false
         if(isCancelled === false){
             setLoading(true)
+            
             axios({
                 method : "GET",
-                url: `${process.env.REACT_APP_BASEURL}/photos?_limit=${limit}`
+                url: `${process.env.REACT_APP_BASEURL}/photos?_limit=${limit}`,
+                //biar gak kena cors
+                withCredentials: false
             }).then((result) => setDatas(result.data)).catch((err) => console.log(err)).finally(() => setLoading(false))
         }
 
@@ -32,7 +35,7 @@ const Collection = () => {
     
     return (
         <React.Fragment>
-            <h1 className="mt-5 mb-3 text-center">
+            <h1 className="mt-3 mb-3 text-center">
                 API Albums
             </h1>
 
@@ -42,7 +45,6 @@ const Collection = () => {
                 </Alert>
             </div>
             <Carousel>
-                {/* start */}
                 {datas.map((data, i) => {
                     return (
                         <Carousel.Item key={i}>
@@ -59,13 +61,12 @@ const Collection = () => {
                         </Carousel.Item>
                     )
                 })}
-                {/* end */}
             </Carousel>
             
             <div className="mt-2 justify-content-center text-center">
-                <Button variant="primary" className="p-2 m-2" onClick={() => handleLimit("+")}> <h5>Tambah</h5> </Button>
+                <Button variant="primary" className="p-2 m-2" onClick={() => handleLimit("+")}> Tambah </Button>
                 {limit > 1 &&
-                    <Button variant="danger" className="p-2 m-2" onClick={() => handleLimit("-")}> <h5>Kurang</h5> </Button>
+                    <Button variant="danger" className="p-2 m-2" onClick={() => handleLimit("-")}> Kurang </Button>
                 }
             </div>
                 
