@@ -19,7 +19,7 @@ const Home = (props) => {
             <div className="utama">
                 <div className="main" id="main">
                     <div className="profile">
-                        <img src={author} alt="" width="200" height="200" className="foto"></img>
+                        <img src={author} alt="" width="220" height="220" className="foto"></img>
                         <div className="fullname">Kiigeeks</div>
                         <div className="role">Thanks to Bang Dea</div>
                         <div className="about">
