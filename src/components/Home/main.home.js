@@ -27,7 +27,7 @@ const Home = (props) => {
                             Menggunakan Fitur Carousel dengan Event Penambahan dan Pengurangan Limit data API, Popup Modal dari title API menampilkan body dan ID,
                             Menggunakan Fitur Scroll untuk menambah data API yang ditampilkan, Menggunakan Fitur React Paginate, Menggunakan Fitur Sort Ascending dan Descending. 
                         </div>
-                        <button className="callme">Contact Me</button>
+                        {/* <a className="callme">Contact Me</a> */}
                     </div>
                 </div>
             </div>
