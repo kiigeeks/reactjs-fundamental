@@ -21,9 +21,9 @@ const Home = (props) => {
                     <div className="profile">
                         <img src={author} alt="" width="220" height="220" className="foto"></img>
                         <div className="fullname">Kiigeeks</div>
-                        <div className="role">Thanks to Bang Dea</div>
+                        <div className="role">Fundamental React JS</div>
                         <div className="about">
-                            Belajar Fundamental React JS dari Dea Course. Melakukan Fetch API, ditampilkan menggunakan template dari Bootstrap.
+                            Belajar Fundamental React JS. Melakukan Fetch API, ditampilkan menggunakan template dari Bootstrap.
                             Menggunakan Fitur Carousel dengan Event Penambahan dan Pengurangan Limit data API, Popup Modal dari title API menampilkan body dan ID,
                             Menggunakan Fitur Scroll untuk menambah data API yang ditampilkan, Menggunakan Fitur React Paginate, Menggunakan Fitur Sort Ascending dan Descending. 
                         </div>
