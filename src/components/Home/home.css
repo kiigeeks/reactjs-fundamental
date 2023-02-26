@@ -1,100 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
-.utama{
-  background-color: rgb(223, 224, 224);
-  margin: 0;
-  padding: 0;
-  font-family: 'Bree Serif', serif;
-  color: whitesmoke;
+.utama {
+    margin: 0;
+    padding: 0;
+    font-family: "Bree Serif", serif;
+    color: whitesmoke;
 }
 
 .main {
-  width: 90%;
-  max-width: 650px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  position: relative;
-  opacity: 0;
-  filter: blur(10px);
-  transition: opacity 2s ease-in-out, filter 2s ease-in-out;
-  -webkit-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
-  -moz-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
-  -ms-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
-  -o-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
-  -webkit-filter: blur(10px);
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    -webkit-filter: blur(10px);
 }
 
 .profile {
-  border-radius:40px;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  align-items: center;
-  padding: 25px 15px;
-  background:#202326;
-  box-shadow: 10px 10px 22px 3px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 10px 10px 22px 3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 22px 3px rgba(0,0,0,0.75);
-  -webkit-border-radius:40px;
-  -moz-border-radius:40px;
-  -ms-border-radius:40px;
-  -o-border-radius:40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 15px 10px;
+    background: #202326;
+    box-shadow: 10px 10px 22px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 22px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 22px 3px rgba(0, 0, 0, 0.75);
 }
 
-.foto{
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
+.foto {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
-.fullname{
-  font-size: 1.8em;
-  font-weight: 600;
+.fullname {
+    font-size: 1.8em;
+    font-weight: 600;
 }
 
-.role{
-  font-size: 1em;
-  font-weight: 400;
+.role {
+    font-size: 1em;
+    font-weight: 400;
 }
 
-.about{
-  font-size: 17px;
-  margin: 25px 10px;
-  text-align: justify;
+.about {
+    font-size: 17px;
+    margin: 25px 10px;
+    text-align: justify;
 }
 
-.link img{
-  width: 50px;
-  height: 50px;
-  margin: 0 15px;
+.link img {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
 }
 
-.link a{
-  text-decoration: none;
+.link a {
+    text-decoration: none;
 }
 
-.callme{
-  border: none;
-  padding: 8px 15px;
-  margin: 15px 0;
-  /* color: white;
-  background-color: #212529; */
-  color: #212529;
-  background-color:aliceblue;
-  cursor: pointer;
-  border-radius: 20px;
+.callme {
+    border: none;
+    padding: 8px 15px;
+    margin: 15px 0;
+    color: #212529;
+    background-color: aliceblue;
+    cursor: pointer;
+    border-radius: 20px;
 }
 
-.callme:hover{
-  color: #212529;
-  background-color:aliceblue;box-shadow: -6px -1px 16px 2px rgba(207,198,198,0.75);
-  -webkit-box-shadow: -6px -1px 16px 2px rgba(207,198,198,0.75);
-  -moz-box-shadow: -6px -1px 16px 2px rgba(207,198,198,0.75);
+.callme:hover {
+    color: #212529;
+    background-color: aliceblue;
+    box-shadow: -6px -1px 16px 2px rgba(207, 198, 198, 0.75);
+    -webkit-box-shadow: -6px -1px 16px 2px rgba(207, 198, 198, 0.75);
+    -moz-box-shadow: -6px -1px 16px 2px rgba(207, 198, 198, 0.75);
 }
